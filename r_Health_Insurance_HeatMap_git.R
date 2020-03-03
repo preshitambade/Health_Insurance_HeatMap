@@ -62,7 +62,7 @@ mine.heatmap <- ggplot(data = mine.long, mapping = aes(x = Scheme.Name,
   theme(plot.title = element_text(hjust = 0.5, face="bold"),   # theme(plot.title = element_text(hjust = 0.5)) code from stackoverflow
         plot.subtitle = element_text(hjust = 0.5, face = "bold"),
         axis.text.x = element_blank(),
-        axis.ticks.x = element_blank()) +
+        axis.ticks.x = element_blank()) +  #source- https://stackoverflow.com/questions/35090883/remove-all-of-x-axis-labels-in-ggplot
   scale_y_discrete(limits = rev(levels(as.factor(mine.long$State)))) # plot with reversing the order of states
 
 mine.heatmap # show the created plot
