@@ -58,7 +58,9 @@ mine.heatmap <- ggplot(data = mine.long, mapping = aes(x = Scheme.Name,
   labs(subtitle = "Faceted By Each Scheme Type (%)") +  # added code to display subtitle
   theme_bw() +  # reversed the order of the code otherwise the titles will not be centered
   theme(plot.title = element_text(hjust = 0.5, face="bold"),   # theme(plot.title = element_text(hjust = 0.5)) code from stackoverflow
-        plot.subtitle = element_text(hjust = 0.5, face = "bold")) +
+        plot.subtitle = element_text(hjust = 0.5, face = "bold"),
+        axis.text.x = element_blank(),
+        axis.ticks.x = element_blank()) +
   scale_y_discrete(limits = rev(levels(as.factor(mine.long$State)))) # plot with reversing the order of states
 
 mine.heatmap # show the created plot
