@@ -10,6 +10,8 @@
 
 #rename scheme names
 
+# bring rural-urban variable into the data
+
 # use data
 mine.data <- read.csv(file = "heatmap_HI_products_statewise.csv") #use tab to fill complete the word
 str(mine.data)  #tells structure of the data
@@ -73,3 +75,6 @@ ggdraw(add_sub(mine.heatmap,"Source: Author's Calcutions from NFHS-4 data", size
 # saving ggplot-http://www.sthda.com/english/wiki/ggsave-save-a-ggplot-r-software-and-data-visualization
 ggsave(file="statelevel_HIscheme_penetration.pdf")  
 ggsave(file="statelevel_HIscheme_penetration.png")  
+
+
+
