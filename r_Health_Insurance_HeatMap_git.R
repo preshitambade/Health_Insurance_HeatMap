@@ -53,9 +53,9 @@ mine.heatmap <- ggplot(data = mine.long, mapping = aes(x = Scheme.Name,
   geom_tile() +  #tells type of plot
   xlab(label = "1-ESIS 2-CGHS 3-State 4-RSBY 5-CBHI 6-Employer 7-Reimbursement 8-Private 9-Other") +   # tells how to label the values
   facet_grid(~ Scheme.Name, scales = "free_x", space = "free_x") +  # creates miniplots according to depth and drops missing columns in each miniplot
-  scale_fill_gradient2(low = "#FFFFFF",
-                       mid = "#87CEFA",
-                       high = "#012345")+ #hexa-decimal codes for colors   
+  scale_fill_gradient2(low = "#ffffff", #FFFFFF-white
+                       mid = "#ffd1b3", #87CEFA-for blue
+                       high = "#b34700")+ #hexa-decimal codes for colors +#012345-black
   ggtitle(label = "Health Insurance Penetration At The State Level (2015-16)") +
   labs(subtitle = "Faceted By Each Scheme Type (%)") +  # added code to display subtitle
   theme_bw() +  # reversed the order of the code otherwise the titles will not be centered
